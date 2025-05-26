@@ -48,19 +48,19 @@ a {
   display: none;
 }
 @keyframes fadeInAnimate {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 @keyframes slideUpAnimate {
-  0%{
+  0% {
     opacity: 0;
     transform: translatey(16px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -234,7 +234,7 @@ a {
   color: var(--primary);
   animation: slideUpAnimate 500ms 100ms backwards;
 }
-.header__about{
+.header__about {
   margin-top: 8px;
   font-size: 18px;
   animation: slideUpAnimate 500ms 200ms backwards;
@@ -259,7 +259,8 @@ a {
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
-  animation: fadeInAnimate 500ms 500ms backwards,  headerScrollAnimate 1000ms infinite alternate-reverse;
+  animation: fadeInAnimate 500ms 500ms backwards,
+    headerScrollAnimate 1000ms infinite alternate-reverse;
 }
 
 @keyframes headerScrollAnimate {

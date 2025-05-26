@@ -19,38 +19,34 @@ async function sendEmail(event) {
 
   const form = document.querySelector(".contact__form");
 
-
-try{
+  try {
     // Loading State
-  console.log("loading");
-  loading.classList.remove("hidden");
+    console.log("loading");
+    loading.classList.remove("hidden");
 
-  await emailjs.sendForm(
-    "service_64cdtx5",
-    "template_7w4jfyr",
-    event.target,
-    "zsvSQeP-OUNi0dCTu"
-  );
+    await emailjs.sendForm(
+      "service_64cdtx5",
+      "template_7w4jfyr",
+      event.target,
+      "zsvSQeP-OUNi0dCTu"
+    );
 
-  //   Success State
+    //   Success State
 
-  form.reset();
+    form.reset();
 
-  console.log("hey, the email has been sent");
-  loading.classList.add("hidden");
+    console.log("hey, the email has been sent");
+    loading.classList.add("hidden");
 
-  body.classList.add("success-open");
-  setTimeout(() => {
-    body.classList.remove("success-open");
-  }, 5000);
+    body.classList.add("success-open");
+    setTimeout(() => {
+      body.classList.remove("success-open");
+    }, 5000);
+  } catch {
+    loading.classList.add("hidden");
 
-}
-
-catch{
-   loading.classList.add("hidden");
-
-   alert("An error has occured.Please try again later or contact me at Ilyasisse574@gmail.com")
-}
-
-
+    alert(
+      "An error has occured.Please try again later or contact me at Ilyasisse574@gmail.com"
+    );
+  }
 }
